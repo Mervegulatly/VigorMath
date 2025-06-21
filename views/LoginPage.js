@@ -1,57 +1,53 @@
-// LoginPage.js
 export function showLogin(onLoginSuccess) {
-  const body = document.body;
+    // If a login box already exists, remove it before recreating it
+  const existingLoginBox = document.getElementById('login-box-container');
+  if (existingLoginBox) {
+    existingLoginBox.remove();
+  }
+ // Create a container element
+  const container = document.createElement('div');
+  container.id = 'login-box-container';
+  container.className = 'login-box'; // Keep the original class for CSS styling.
 
-  // Yardımcı fonksiyon: element oluşturup opsiyonel özellikler atar
-  const createElem = (tag, { className, id, type, placeholder, href, text, html } = {}) => {
-    const el = document.createElement(tag);
-    if (className) el.className = className;
-    if (id) el.id = id;
-    if (type) el.type = type;
-    if (placeholder) el.placeholder = placeholder;
-    if (href) el.href = href;
-    if (text) el.textContent = text;
-    if (html) el.innerHTML = html;
-    return el;
-  };
+  // defines HTML structure in a more readable way by using Template literal 
+  container.innerHTML = `
+    <form id="login-form">
+      <h2>Login</h2>
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Şifre" required>
+      </div>
+      <button type="submit">Giriş Yap</button>
+      <p class="login-links">
+        <a href="#">Şifremi Unuttum</a> | <a href="#">Yardım</a>
+      </p>
+    </form>
+  `;
 
-  const loginBox = createElem('div', { className: 'login-box', id: 'login-box' });
+   // Adds the created container to body
+  document.body.appendChild(container);
 
-  const h2Login = createElem('h2', { text: 'Login' });
-  loginBox.appendChild(h2Login);
+  // Provides access to form and input elements
+  const loginForm = container.querySelector('#login-form');
+  const usernameInput = container.querySelector('#username');
+  const passwordInput = container.querySelector('#password');
 
-  const inputUser = createElem('input', { type: 'text', placeholder: 'Kullanıcı Adı', id: 'username' });
-  loginBox.appendChild(inputUser);
+  // This ensures that the form is also submitted when the 'Enter' key is pressed.
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();   // Prevents the default submit behavior of the form (page not renewed)
 
-  const inputPass = createElem('input', { type: 'password', placeholder: 'Şifre', id: 'password' });
-  loginBox.appendChild(inputPass);
-
-  const button = createElem('button', { text: 'Giriş Yap' });
-  loginBox.appendChild(button);
-
-  const pLoginLinks = createElem('p');
-
-  const linkForgot = createElem('a', { href: '#', text: 'Şifremi Unuttum' });
-  pLoginLinks.appendChild(linkForgot);
-
-  pLoginLinks.appendChild(document.createTextNode(' | '));
-
-  const linkHelp = createElem('a', { href: '#', text: 'Yardım' });
-  pLoginLinks.appendChild(linkHelp);
-
-  loginBox.appendChild(pLoginLinks);
-
-  body.appendChild(loginBox);
-
-  button.addEventListener('click', () => {
-    const username = inputUser.value.trim();
-    const password = inputPass.value.trim();
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
 
     if (username && password) {
-      loginBox.remove();      // Giriş kutusunu kaldır
-      onLoginSuccess();       // HomePage'i başlat
+      container.remove();   // Remove input box
+      onLoginSuccess();     // Call the successful login callback
     } else {
       alert('Lütfen kullanıcı adı ve şifre giriniz!');
     }
   });
+
+  usernameInput.focus();   // Autofocus on username field to improve user experience
 }
