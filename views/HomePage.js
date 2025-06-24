@@ -2,11 +2,7 @@
 const navItems = ['Misyon', 'Vizyon', 'Bize Ulaşın', 'Login'];
 const sidebarItems = ['Geçmiş Veriler', 'Aylık Enerji Kullanımı', 'Tahminler', 'Öneriler'];
 
-/**
- * Creates the HTML of the Header component.
- * @param {string[]} items - List of navigation links.
- * @returns {string} Header HTML.
- */
+
 function createHeader(items) {
   return `
     <header>
@@ -19,11 +15,7 @@ function createHeader(items) {
   `;
 }
 
-/**
- * Creates the HTML of the Sidebar component.
- * @param {string[]} items - List of Sidebar menu items.
- * @returns {string} Sidebar HTML.
- */
+
 function createSidebar(items) {
   return `
     <div class="sidebar">
@@ -35,10 +27,7 @@ function createSidebar(items) {
   `;
 }
 
-/**
- * Creates the HTML of the main content component.
- * @returns {string} Content HTML.
- */
+
 function createContent() {
   return `
     <div class="content">
@@ -56,10 +45,7 @@ function createContent() {
   `;
 }
 
-/**
- * Creates the Main Panel component (containing sidebar and content).
- * @returns {string} Panel HTML.
- */
+
 function createPanel() {
   return `
     <div class="panel">

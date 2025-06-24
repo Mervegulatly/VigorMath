@@ -1,5 +1,4 @@
-export function showLogin(onLoginSuccess) {
-    // If a login box already exists, remove it before recreating it
+export function showLogin(onLoginSuccess) { // If a login box already exists, remove it before recreating it
   const existingLoginBox = document.getElementById('login-box-container');
   if (existingLoginBox) {
     existingLoginBox.remove();
