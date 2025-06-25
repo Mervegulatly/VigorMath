@@ -5,7 +5,18 @@ body {
       margin: 0;
       padding: 0;
     }
-    header, .login-box, .panel, .colors, .fonts {
+    .login-box{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center; 
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header, .panel, .colors, .fonts {
       background-color: #fff;
       border-radius: 10px;
       padding: 20px;
@@ -23,15 +34,18 @@ body {
     }
     .login-box input {
       display: block;
-      width: 100%;
+      width: 80%;
       padding: 10px;
       margin: 10px 0;
     }
     .login-box button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-color: #22ECC7;
       border: none;
       padding: 10px;
-      width: 100%;
+      width: 50%;
       color: white;
       font-weight: bold;
       cursor: pointer;

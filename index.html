@@ -6,8 +6,25 @@
   <title>VigorMath</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+
+  <div id="app">
+    <div id="login-box-container" class="login-box">
+      <form id="login-form">
+        <h2>Login</h2>
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Kullanıcı Adı" required />
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Şifre" required />
+        </div>
+        <button type="submit">Giriş Yap</button>
+        <p class="login-links">
+          <a href="#">Şifremi Unuttum</a> | <a href="#">Yardım</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
   <script type="module" src="main.js"></script>
 </body>
 </html>
