@@ -1,9 +1,13 @@
 import React from 'react';
 import "./button.css";
 
-function Button() {
+type InputProps = {
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+};
+
+function Button({onClick}: InputProps) {
   return (
-    <button className="button">Giriş Yap</button>
+    <button className="button" onClick={onClick} >Giriş Yap</button>
   )
 }
 
