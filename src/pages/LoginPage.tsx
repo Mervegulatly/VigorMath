@@ -23,6 +23,7 @@
 //   });
 
 //   usernameInput.focus(); 
+<<<<<<< HEAD
 // }
 
 // src/pages/LoginPage.tsx
@@ -77,3 +78,6 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+=======
+// }
+>>>>>>> origin/master
