@@ -27,7 +27,7 @@ const LoginPage = () => {
 
   return (
     <div className="App">
-      <h2 className='input-wrapper-h2'>Giriş Formu</h2>
+      <h2 className='input-wrapper-h2'>Kullanıcı Girişi</h2>
       <Form>
         <Input
           type="text"
