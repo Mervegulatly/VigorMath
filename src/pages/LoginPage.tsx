@@ -1,33 +1,3 @@
-// export function setupLogin(onLoginSuccess) {
-//   const loginForm = document.getElementById('login-form');
-//   const usernameInput = document.getElementById('username');
-//   const passwordInput = document.getElementById('password');
-
-//   if (!loginForm || !usernameInput || !passwordInput) {
-//     console.error('Login form bileşenleri bulunamadı!');
-//     return;
-//   }
-
-//   loginForm.addEventListener('submit', (event) => {
-//     event.preventDefault();
-
-//     const username = usernameInput.value.trim();
-//     const password = passwordInput.value.trim();
-
-//     if (username && password) {
-//       document.getElementById('login-box-container').remove();
-//       onLoginSuccess(); // örn. ana sayfayı göster
-//     } else {
-//       alert('Lütfen kullanıcı adı ve şifre giriniz!');
-//     }
-//   });
-
-//   usernameInput.focus(); 
-<<<<<<< HEAD
-// }
-
-// src/pages/LoginPage.tsx
-
 import { useState } from 'react';
 import Input from '../components/input/Input';
 import Button from '../components/button/Button';
@@ -57,7 +27,7 @@ const LoginPage = () => {
 
   return (
     <div className="App">
-      <h2>Giriş Formu</h2>
+      <h2 className='input-wrapper-h2'>Giriş Formu</h2>
       <Form>
         <Input
           type="text"
@@ -78,6 +48,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-=======
-// }
->>>>>>> origin/master

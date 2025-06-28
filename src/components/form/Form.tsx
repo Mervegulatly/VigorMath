@@ -9,11 +9,8 @@ function Form({ children }: FormProps) {
   return (
     <div className="form">
       {children}
-<<<<<<< HEAD
-=======
-      <a href="" className='sifremiUnuttum'  >Sifremi Unuttum</a>
-      <a href="" className='yardim'  >Yardim</a>
->>>>>>> origin/master
+      <a href="" className='login-link login-link--forgot-password' >Şifremi Unuttum</a>
+      <a href="" className='login-link login-link--help'  >Yardım</a>
     </div>
   );
 }
