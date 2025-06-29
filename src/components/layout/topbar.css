@@ -1,0 +1,26 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'josefin Sans' sans-serif;
+  background-color: #ffff;
+}
+.topbar .topbar-right, .topbar .topbar-left{
+    flex: 2;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.topbar .topbar-left span img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.topbar .topbar-left{
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
