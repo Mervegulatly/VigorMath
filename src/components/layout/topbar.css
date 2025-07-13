@@ -7,7 +7,6 @@
   /*background-color: rgba(159, 232, 110, 0.5);*/
   background: transparent;
   position: relative;
-  z-index: -1000;
   justify-content: center;
 }
 .topbar .wrapper{
