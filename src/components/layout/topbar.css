@@ -4,7 +4,16 @@
   display: flex;
   flex-wrap: wrap;
   font-family: 'josefin Sans' sans-serif;
-  background-color: #ffff;
+  /*background-color: rgba(159, 232, 110, 0.5);*/
+  background: transparent;
+  position: relative;
+  z-index: -1000;
+  justify-content: center;
+}
+.topbar .wrapper{
+    display: flex;
+    width: 100%;
+    max-width: 1366px;
 }
 .topbar .topbar-right, .topbar .topbar-left{
     flex: 2;

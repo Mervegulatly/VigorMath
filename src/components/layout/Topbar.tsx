@@ -1,9 +1,11 @@
 import React from 'react';
 import './Topbar.css';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => {
   return (
     <div className="topbar">
+      <div className='wrapper'>
         <div className='topbar-left'>
             <span>
                 <img src='public/VigorMathIcon.jpg'></img>
@@ -13,8 +15,9 @@ const Topbar = () => {
             <a href='#'>MİSYON</a>
             <a href='#'>VİZYON</a>
             <a href='#'>BAŞVURU</a>
-            <a href='/login'>GİRİŞ</a>
+            <Link to="/login">GİRİŞ</Link>
         </div>
+      </div>
     </div>
   );
 };
